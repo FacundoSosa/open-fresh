@@ -1,11 +1,11 @@
 
 import './App.css';
-import Navegador from './componentes/Navegador.jsx'
+import Header from "./componentes/Header/Header.jsx"
 
 function App() {
   return (
     <div>
-      <Navegador/>
+      <Header />
     </div>
   );
 }

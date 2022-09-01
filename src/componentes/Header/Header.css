@@ -1,0 +1,17 @@
+/* ========== ESTILOS DEL HEADER Y NAVEGADOR ============ */
+
+.logo {
+    width: 56px;
+    height: 64px;
+}
+
+.header__mi-cuenta__img {
+    width: 20px;
+    height: 22px;
+}
+
+.header__carrito__img {
+    width: 24px;
+    height: 20px;
+}
+

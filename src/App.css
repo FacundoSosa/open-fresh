@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-.logo {
-    width: 106px;
-    height: 106px;
+body {
+    padding: 0% 6%;
 }
+
+
