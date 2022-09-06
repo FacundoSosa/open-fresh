@@ -1,9 +1,9 @@
 import React from 'react';
-import Navegador from './Navegador/Navegador.jsx';
-import CartWidget from './CartWidget/CartWidget.jsx';
-import MiCuenta from './MiCuenta/MiCuenta.jsx';
-import ItemListContainer from './ItemListContainer/ItemListContainer.jsx';
-import logo from "../../assets/logo.svg"
+import Navegador from '../Navegador/Navegador.jsx';
+import CartWidget from '../CartWidget/CartWidget.jsx';
+import MiCuenta from '../MiCuenta/MiCuenta.jsx';
+import logo from "../../../assets/logo.svg"
+
 
 const Header = () => {
   return (
@@ -23,7 +23,6 @@ const Header = () => {
         </div>
     
         <Navegador />
-        <ItemListContainer saludo="Hola"/>
     </div>
   )
 }

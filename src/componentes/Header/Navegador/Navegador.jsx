@@ -1,5 +1,6 @@
 import React from "react";
-import "../Header.css";
+import "../Header/Header.css";
+
 
 const Navegador = () => {
     return (
