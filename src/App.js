@@ -1,14 +1,14 @@
 
 import './App.css';
 import Header from "./componentes/Header/Header/Header.jsx"
-import { Item } from './componentes/Item/Item/Item';
+import ItemListContainer from './componentes/Item/ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <div>
       <Header />
-      <Item />
+      <ItemListContainer />
     </div>
   );
 }

@@ -13,7 +13,7 @@ const Header = () => {
 
             <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-                <button type="submit" class="btn btn-primary">Buscar</button>
+                <button type="submit" className="btn btn-primary">Buscar</button>
             </form>
 
             <div className='d-flex align-items-end'>
