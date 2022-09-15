@@ -1,26 +1,32 @@
 import React, {useEffect, useState} from 'react';
-import { ItemDetail } from '../../Item/ItemDetail/ItemDetail';
-import { productos } from "../../../json/productos.json";
+import { useParams } from 'react-router-dom';
+import Header from '../../Header/Header/Header.jsx';
+import ItemDetail from "../../Item/ItemDetail/ItemDetail.jsx"
+
 
 
 const ItemDetailContainer = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        
-        const promesa = new Promise ((resolve, reject) => {
-            const producto = producto.find(prod => prod.id);
+  const [item, setItem] = useState([]);
+  const {productId} = useParams();
 
-            setTimeout(() => {
-              resolve(producto)
-            }, 2000);
-          });
-          promesa.then((resultado) => {
-            setItems(resultado)
-          })
-    }, []);
+  const getProductById = (data, {productId}) => {
+      const producto = data.find((producto) => producto.id == productId )
+      setItem(producto);
+  }
+
+  useEffect(() => {
+      fetch("../productos.json")
+      .then((respuesta) => respuesta.json())
+      .then((data) => {
+         getProductById(data, {productId})
+      })
+    }, [productId]);
+
+    
 
   return (
     <div>
+        <Header />
         <ItemDetail item={item}/>
     </div>
   )

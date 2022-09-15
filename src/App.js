@@ -1,15 +1,22 @@
 
 import './App.css';
-import Header from "./componentes/Header/Header/Header.jsx"
-import ItemListContainer from './componentes/Container/ItemListContainer/ItemListContainer.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from "./componentes/Home/Home.jsx"
+import ItemListContainer from './componentes/Container/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './componentes/Container/ItemDetailContainer/ItemDetailContainer';
+
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <ItemListContainer />
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Home />}/>
+          <Route exact path='/catalogo' element={<ItemListContainer />}/>
+          <Route exact path='/catalogo/:productCat' element={<ItemListContainer />}/>
+          <Route exact path='/producto/:productId' element={<ItemDetailContainer />}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 

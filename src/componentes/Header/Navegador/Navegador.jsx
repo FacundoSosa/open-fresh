@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Header/Header.css";
 
 
@@ -7,13 +8,16 @@ const Navegador = () => {
         <nav className="d-flex justify-content-start">
             <ul className="nav">
                 <li className="nav-item">
-                    <a className="nav-link active ps-0" aria-current="page" href="#">Home</a>
+                    <Link className="nav-link active ps-0" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Servicios</a>
+                    <Link className="nav-link" to="/catalogo">Catálogo</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Productos</a>
+                    <Link className="nav-link" to="/catalogo/lacteos">Lácteos</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/catalogo/almacen">Almacén</Link>
                 </li>
             </ul>
         </nav>
