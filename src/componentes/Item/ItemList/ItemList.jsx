@@ -7,11 +7,12 @@ const ItemList = ({items}) => {
         <div className='row'>
             {items.map(item => {
                 return (
-                    <Item key={item.id} item={item} />
+                    <Item key={item.id} item={item} />  
                 )
             })}
         </div>
       )
+      
 }
 
 export default ItemList;

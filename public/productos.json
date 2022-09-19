@@ -6,7 +6,8 @@
         "img": "../assets/leche.webp", 
         "marca": "BLANCANUBE", 
         "nombre": "Leche entera Blancanube larga vida 1 L", 
-        "precio": 55
+        "precio": 55,
+        "stock": 8
     },
 
     {
@@ -15,7 +16,8 @@
         "img": "../assets/huevos.webp", 
         "marca": "PRODHIN", 
         "nombre": "Huevo Color Especial Prodhin 6 un.", 
-        "precio": 85
+        "precio": 85,
+        "stock": 6
     },
 
     {
@@ -24,7 +26,8 @@
         "img": "../assets/arroz.webp", 
         "marca": "SAMAN", 
         "nombre": "Arroz blanco SAMAN 1 kg", 
-        "precio": 65
+        "precio": 65,
+        "stock": 3
     }
 
 ]

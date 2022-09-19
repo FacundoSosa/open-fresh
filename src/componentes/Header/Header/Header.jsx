@@ -1,6 +1,6 @@
 import React from 'react';
 import Navegador from '../Navegador/Navegador.jsx';
-import CartWidget from '../CartWidget/CartWidget.jsx';
+import CartWidget from '../../Carrito/CartWidget/CartWidget.jsx';
 import MiCuenta from '../MiCuenta/MiCuenta.jsx';
 import logo from "../../../assets/logo.svg"
 import { Link } from 'react-router-dom';
