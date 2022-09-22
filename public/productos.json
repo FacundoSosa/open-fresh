@@ -28,6 +28,16 @@
         "nombre": "Arroz blanco SAMAN 1 kg", 
         "precio": 65,
         "stock": 3
+    },
+
+    {
+        "id": 4,
+        "categoria": "lacteos",
+        "img": "../assets/manteca.webp", 
+        "marca": "CONAPROLE", 
+        "nombre": "Manteca CONAPROLE 200 g", 
+        "precio": 84,
+        "stock": 3
     }
 
 ]

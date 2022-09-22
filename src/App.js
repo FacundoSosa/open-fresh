@@ -5,11 +5,13 @@ import Home from "./componentes/Home/Home.jsx"
 import ItemListContainer from './componentes/Container/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/Container/ItemDetailContainer/ItemDetailContainer';
 import Carrito from './componentes/Carrito/CartView/Carrito';
+import CartProvider from './componentes/Carrito/CartContext/CartContext';
 
 
 
 function App() {
   return (
+    <CartProvider>
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />}/>
@@ -19,6 +21,7 @@ function App() {
           <Route exact path='/carrito' element={<Carrito />}/>
         </Routes>
       </BrowserRouter>
+    </CartProvider>
   );
 }
 
