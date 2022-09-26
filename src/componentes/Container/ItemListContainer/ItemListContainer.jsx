@@ -8,7 +8,6 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const {productCat} = useParams();
   
-
   const getProductById = (data, {productCat}) => {
       const productos = data.filter((productos) => productos.categoria == productCat )
       setItems(productos);
@@ -27,6 +26,8 @@ const ItemListContainer = () => {
         }
       })
     }, [productCat]);
+
+    
     
   return (
       <div className='row'>

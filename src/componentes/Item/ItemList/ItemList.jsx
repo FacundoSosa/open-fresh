@@ -2,7 +2,6 @@ import React from 'react'
 import Item from '../Item/Item';
 
 const ItemList = ({items}) => {
-    
     return (
         <div className='row d-flex justify-content-center'>
             {items.map(item => {
