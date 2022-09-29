@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 
+
 const Item = ({ item }) => {
     const {addItem} = useContext(CartContext);
     const [cantidad, setCantidad] = useState(0);
@@ -14,7 +15,7 @@ const Item = ({ item }) => {
 
     return(
         <div className="card col-md-2 m-4 d-flex flex-column justify-content-center align-items-center">
-            <img src={item.img} className="card-img-top img-fluid w-75 h-75 my-2" alt="..."/>
+            <img src={"../assets/" + item.imagen} className="card-img-top img-fluid w-75 h-75 my-2" alt={item.nombre} />
             <div className="card-body">
                 <h5 className="card-title">{item.marca}</h5>
                 <p className="card-text">{item.nombre}</p>

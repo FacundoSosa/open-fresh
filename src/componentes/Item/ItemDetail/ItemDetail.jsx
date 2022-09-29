@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="d-flex">
-      <img src={item.img} className="card-img-top w-25 h-25 p-5" alt="..."/>
+      <img src={"../../assets/" + item.imagen} className="card-img-top w-25 h-25 p-5" alt="..."/>
       <div className="card-body d-flex flex-column justify-content-center align-items-start px-5">
         <h5 className="card-title">{item.marca} </h5>
         <p className="card-text">{item.nombre} </p>

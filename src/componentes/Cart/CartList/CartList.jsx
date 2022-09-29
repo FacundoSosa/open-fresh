@@ -12,7 +12,7 @@ const Carrito = () => {
         <Header />
         {cart.map((producto) => {
           return (
-            <CartItems producto={producto} removeItem={removeItem} />
+            <CartItems key={producto.id} producto={producto} removeItem={removeItem} />
           )
         })}
 

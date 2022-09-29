@@ -15,7 +15,6 @@ const CartProvider = (props) => {
         } else {
             setCart([...cart, {...item, cantidad:cantidad}])
         }
-        console.log(cart);
     }
 
     const removeItem = (id) => {
@@ -48,8 +47,6 @@ const CartProvider = (props) => {
         });
         return count;
     }
-
-   console.log(cart);
 
     return (
         <CartContext.Provider value={{cart, addItem, clear, isInCart, totalUnidades, totalPrecio, removeItem}}>
