@@ -5,7 +5,7 @@ import CartItems from '../CartItems/CartItems';
 import { Link } from 'react-router-dom';
 
 const Carrito = () => {
-  const { cart, removeItem, clear, totalUnidades } = useContext(CartContext);
+  const { cart, removeItem, clear, totalUnidades, totalPrecio } = useContext(CartContext);
 
   return (
     <div>
@@ -16,8 +16,16 @@ const Carrito = () => {
           )
         })}
 
-        {(totalUnidades()) === 0 ? <Link to="/catalogo" className='btn btn-primary'>Ver Catalogo</Link> : <button className='btn btn-primary' onClick={clear}>Vaciar carrito</button>}
-        
+        {(totalUnidades()) === 0 
+        ? <Link to="/catalogo" className='btn btn-primary'>Ver Catalogo</Link> 
+        : <div>
+            <span>Total a pagar: ${totalPrecio()}</span>
+            <div>
+              <button className='btn btn-primary' onClick={clear}>Vaciar carrito</button> 
+              <Link to="/checkout" className='btn btn-primary mx-3'>Finalizar Compra</Link>
+            </div>
+          </div>
+         }
     </div>
   )
 }
