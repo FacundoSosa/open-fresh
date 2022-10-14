@@ -8,9 +8,12 @@ const CartProvider = (props) => {
     const [cart, setCart] = useState([])
 
     const addItem = (item, cantidad) => {
+        console.log(cantidad);
         if (isInCart(item.id)) {
-            const producto = cart.find(prod => prod.id === item.id)
-            cart[cart.indexOf(producto)].cantidad = cantidad + cantidad;
+            const producto = cart.find(prod => prod.id === item.id) 
+            const cantidadNueva = cart[cart.indexOf(producto)].cantidad + cantidad;
+            cart[cart.indexOf(producto)].cantidad = cantidadNueva
+            console.log(cantidadNueva);
             setCart([...cart])
         } else {
             setCart([...cart, {...item, cantidad:cantidad}])
@@ -43,7 +46,7 @@ const CartProvider = (props) => {
         const copiaCarrito = [...cart];
         let count = 0;
         copiaCarrito.forEach(producto => {
-            count = count + producto.cantidad + producto.precio;
+            count = count + producto.cantidad * producto.precio;
         });
         return count;
     }
