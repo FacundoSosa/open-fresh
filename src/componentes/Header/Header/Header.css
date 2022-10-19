@@ -15,3 +15,7 @@
     height: 20px;
 }
 
+.clean-input {
+    border: none;
+    outline: none;
+}

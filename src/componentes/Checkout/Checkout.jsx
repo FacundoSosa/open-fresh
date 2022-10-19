@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
 import Header from '../Header/Header/Header'
-import { CartContext } from '../Context/CartContext/CartContext';
+import { CartContext } from '../Context/CartContext';
 import { getFirestore, collection, addDoc } from "firebase/firestore"
 import Success from '../Success/Success';
+import Footer from '../Home/Footer/Footer';
 
 function Checkout() {
     const { cart, totalPrecio, totalUnidades, clear } = useContext(CartContext);
@@ -16,7 +17,7 @@ function Checkout() {
             const buyer = {nombre:nombre, email:email, telefono:telefono}
             const items = [];
             cart.forEach((item) => {
-                items.push({id:item.id, nombre:item.nombre, precio:item.precio})
+                items.push({id:item.id, nombre:item.nombre, precio:item.precio, cantidad:item.cantidad})
             })
             const date = new Date();
             const compra = {comprador:buyer, items:items, fecha:date, cantidad:totalUnidades(), total:totalPrecio()}
@@ -28,9 +29,6 @@ function Checkout() {
                 clear();
             })
         }
-
-        
-        
     }
 
 
@@ -49,14 +47,13 @@ function Checkout() {
                         <input type="email" className="form-control" onInput={(e) => setTelefono(e.target.value)}/>
                     </form>
                     <div className='d-flex justify-content-between'>
-                        <button className='btn btn-primary' onClick={() => generarCompra()}>Generar Compra</button>
+                        <button className='btn btn-warning text-light fw-semibold' onClick={() => generarCompra()}>Generar Compra</button>
                         <span>Total a pagar: ${totalPrecio()}</span>
                     </div>
                 </div>
             : purchaseId !== "" ? <Success id={purchaseId} /> : <div className="alert alert-danger text-center" role="alert">Error: Agrega productos al carrito antes de finalizar la compra</div>}
             
-            
-            
+            <Footer/>
         </div>
     )
 }

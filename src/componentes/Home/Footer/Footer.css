@@ -1,0 +1,20 @@
+.list-style-none {
+    list-style-type: none;
+}
+
+.clean-button {
+    border: none;
+    background: none;
+}
+
+.fondo-naranja {
+    background-color: rgba(255, 203, 33, 0.8);
+}
+
+.iconos-redes {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 12px;
+}

@@ -1,4 +1,9 @@
 .img-cart {
-    width: 100px;
-    height: 100px;
+    width: 60%;
+    height: 60%;
+}
+
+.trash {
+    cursor: pointer;
+    padding-right: 14px;
 }

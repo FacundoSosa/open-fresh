@@ -1,7 +1,7 @@
 import React, { useContext }  from 'react';
 import carrito from "../../../assets/carrito.svg";
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../Context/CartContext/CartContext';
+import { CartContext } from '../../Context/CartContext';
 
 const CartWidget = () => {
   const {totalUnidades} = useContext(CartContext);
